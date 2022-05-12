@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+    <head>
+        <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color:transparent;
+            }
+            li {
+              float: left;
+            }
+            li a {
+              display: block;
+              color: rgb(0, 0, 0);
+              font-size: 20px;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-family: 'Abel';
+            }
+            li a:hover {
+              background-color:#ffc838;
+              border-radius: 10px;
+            }
+            
+            </style>
+            </head>
+            <body> 
+              <div class="rectangle"></div>
+            <div>
+            <ul>
+                <li class="lil" ><IMG class="logo" SRC="images/logo1.png"></li>
+              <li class="lii"><a href="https://form.123formbuilder.com/6144419/form" class="blueLink13">Contact us</a></li>
+              <li class="lii"><a href="reslist.html" class="blueLink13">Resturant</a></li>
+              <li class="lii"> <a href="https://www.facebook.com"  class="fab fa-facebook"></a></li>
+              <li class="lii"> <a href="https://www.youtube.com"  class="fab fa-youtube"></a></li>
+              <li class="lii"> <a href="https://twitter.com" class="fab fa-twitter"></a></li>
+              <li class="lii"> <a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
+              <li class="lii"> <a href="https://www.linkedin.com" class="fab fa-linkedin"></a></li>
+              <li class="li1"><a href="account.html"><button class="btn">Account</button></a></li>
+            </ul>
+        </div>
+        <div class="burger"><a href="burger.jpg" download><img src="burger.jpg"></a></div>
+        </div>
+	<a href="privacy.html" class="privacy">Privacy</a>
+	<a href="terms.html" class="terms">Terms</a>
+  <form class="example">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"  onclick="ouvrirPage()"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="mylocation">My Location </div>
+<div class="popular">Popular Category</div>
+<a href="fries.html"><div class="rect1"></div></a>
+<a href="pizza.html"><div class="rect2"></div></a>
+<a href="Burger.html"><div class="rect3"></div></a>
+<a href="sandwich.html"><div class="rect4"></div></a>
+<a href="chicken.html"><div class="rect5"></div></a>
+<a href="pasta.html"><div class="rect6"></div></a>
+<div class="pi">Pizza</div>
+<div class="pizza"></div>
+
+<div class="bu">Burger</div>
+<div class="san">Sandwich</div>
+<div class="chi">Chicken</div>
+<div class="pas">Pasta</div>
+<div class="fri">Fries</div>
+<div class="loc" onclick="getlocation();"></div>
+<div class="search">Search</div>
+<div class="fries"></div>
+<div class="buri"></div>
+<div class="chicken"></div>
+<div class="pasta"></div>
+<div class="sandwich"></div>  
+<div id="demo" style="width: 600px; height: 200px; margin-left: 200px; top:500px;"></div>      
+<script src="https://maps.google.com/maps/api/js?sensor=false"> </script> 
+<script type="text/javascript"> 
+function getlocation(){ 
+    if(navigator.geolocation){ 
+        navigator.geolocation.getCurrentPosition(showPos, showErr); 
+    }
+    else{
+        alert("Sorry! your Browser does not support Geolocation API")
+    }
+} 
+function showPos(position){ 
+    latt = position.coords.latitude; 
+    long = position.coords.longitude; 
+    var lattlong = new google.maps.LatLng(latt, long); 
+    var myOptions = { 
+        center: lattlong, 
+        zoom: 15, 
+        mapTypeControl: true, 
+        navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL} 
+    } 
+    var maps = new google.maps.Map(document.getElementById("demo"), myOptions); 
+    var markers = 
+    new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
+} 
+     function showErr(error) {
+      switch(error.code){
+      case error.PERMISSION_DENIED:
+     alert("User denied the request for Geolocation API.");
+      break;
+     case error.POSITION_UNAVAILABLE:
+     alert("USer location information is unavailable.");
+    break;
+    case error.TIMEOUT:
+    alert("The request to get user location timed out.");
+    break;
+   case error.UNKNOWN_ERROR:
+    alert("An unknown error occurred.");
+    break;
+   }
+  }
+  function ouvrirPage() {
+            var a = document.getElementById("search").value;
+            if (a === "cakes") {
+                window.open("menu.html");
+            }
+            }
+        </script> 
+</body> 
+<br>
+    <br>
+    <br>
+    <br>
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+            <script></script>
+</div>
+    </body >
+</html>

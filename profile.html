@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body,html{
+    height:100%;
+}
+h2{
+    font-weight: bolder;
+    color: #a1a301;
+}
+
+form{
+    width:550px;
+}
+
+form *{
+    font-weight: bold;
+}
+
+form label{
+    font-size: 18px;
+    color:#000000;
+}
+
+form .form-control,form .form-control:focus{
+    border-color:transparent;
+    border-bottom-color: #030007;
+    box-shadow:none;
+}
+
+form .btn{ 
+    border-radius: 0px;
+    border-color: transparent;
+}
+
+.btn.btn-default{
+    background: #ebebeb;
+    color:#000108;
+}
+
+.btn.btn-primary{
+    background: #aca004;
+    color:white;
+}
+.sidebar {
+    height: 100vh !important;
+    bottom: 0;
+    padding-left:20px;
+    font-size: 1.3rem;
+    background: #b19105;
+}
+
+@media screen and (max-width:940px){
+    .sidebar{
+        font-size: 1rem;
+        padding-left :0px;
+    }
+}
+
+
+.sidebar .nav-link{
+    margin-bottom: 20px;
+    color:#000000;
+}
+
+.nav-link.active{
+    color:rgb(12, 0, 0);
+}
+
+.main > .row{
+    height: 100%;
+}
+
+@media screen and (max-width:768px){
+    .content{
+        padding-left:50px; 
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 50px;
+    }
+    
+    form{
+        width: 100%;
+        margin:auto;
+    }
+    
+}
+
+.menu {
+    position: absolute;
+    right: 10%;
+    top:30px;
+    margin:auto;
+    display: none;  
+    cursor:pointer;
+    z-index: 5;
+    height: 33px;
+    width:30px;
+}
+
+.bar,.bar:after,.bar:before {
+    width:30px;
+    height:3px;
+    background: #b0b308;
+    transition: all 0.2s;
+}
+
+.bar{
+    position: relative;
+}
+
+.bar:after {
+    position: absolute;
+    content: '';
+    left:0;
+    top:10px;
+    transition: top 0.2s 0.2s,transform 0.2s;
+}
+
+.bar:before {
+    position: absolute;
+    content: '';
+    left:0;
+    bottom:10px;
+    transition: bottom 0.2s 0.2s,transform 0.2s;
+}
+.bar.animate{
+    background: transparent;
+}
+.bar.animate:after{
+    top:0;
+    transform: rotate(45deg);
+    transition: top 0.2s ,transform 0.2s 0.2s;
+    background: rgb(0, 0, 0);
+}
+
+.bar.animate:before{
+    bottom:0;
+    transform: rotate(-45deg);
+    transition: bottom 0.2s,transform 0.2s  0.2s;
+    background: rgb(0, 0, 0);
+}
+
+.expand-menu {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: #8a7d06;
+    transition: width 0.5s;
+    width: 0%;
+}
+
+.expand-menu .nav-link{
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 20px;
+    color:#010108;
+    font-size:1.5rem;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.expand-menu .nav-link.animate{
+    display: block;
+}
+
+.expand-menu .nav-link.animate-show{
+    opacity:1;
+}
+
+.expand-menu .nav-link.active{
+    color:rgb(10, 1, 1);
+}
+
+.expand-menu.animate{
+    width : 100%;
+}
+        </style>
+</head>
+<body>     
+        <div class="col-md-9">
+            
+            <div class="container content clear-fix">
+        
+            <h2 class="mt-5 mb-5"><u>Profile Settings</u></h2>
+            
+            <div class="row" style="height:100%">
+            
+                <div class="col-md-9">
+                    
+                    <div class="container">
+                    
+                        <form action="UP.php" METHOD="POST"> 
+                    
+                            <div class="form-group">
+
+                                <label for=fullName>New Full Name</label>
+                                <input type="text" class="form-control" id="fullName" name="fullname">
+
+                            </div>
+                            <BR>
+                                <br>
+                            <div class="form-group">
+
+                                <label for=email>Email</label>
+                                <input type="email" class="form-control" id="email" name="email">
+
+                            </div>
+                            <BR>
+                                <br>
+                            <div class="form-group">
+
+                                <label for=username>New Username</label>
+                                <input type="username" class="form-control" id="email" name="username">
+
+                            </div>
+                            <BR>
+                                <br>
+                            <div class="form-group">
+
+                                <label for=pass>New Password</label>
+                                <input type="password" class="form-control" id="pass" name="passwordsignup">
+
+                            </div>
+                            
+                            
+                            <div class="row mt-5">
+                            <BR>
+                                <br>
+                                <div class="col">
+                                
+                                    <button type="button" >Save Changes</button>
+                                
+                                </div>
+                                <br>
+                                <br>
+                            
+                            </div>
+
+                        </form>
+                        <a href="account.html"><button" class="btn btn-default btn-block" >Cancel</button></a>
+                    
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+            
+        </div>
+    
+    </div>
+    
+</div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script> 
+    $(document).ready(function(){
+    
+    $('.menu').on('click', function() {
+		$('.bar').toggleClass('animate');
+        $('.expand-menu').toggleClass('animate');
+        $('.expand-menu .nav-link').toggleClass('animate');
+        setTimeout(function(){
+            $('.expand-menu .nav-link').toggleClass('animate-show');
+        },500)
+	})
+    
+})
+    </script>
+</body>
+    </html>

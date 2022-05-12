@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+		
+		</style>
+  </head>
+  <body>
+  
+      
+ <main>
+<header id="site-header">
+		<div class="container">
+			<div class="headnav">
+				<img src="./img/location.png" style="height: 35px; width: 35px; border-radius: 50%; position: absolute; top: 30px; right: 250px;" onclick="getlocation();">
+				<img src="https://cdn-icons-png.flaticon.com/512/1380/1380370.png" style="height: 44px; width: 44px; border-radius: 50%; position: absolute; top: 33px; right: 190px;" onclick="myFunction()">
+				<a href="home.html"><img src="./img/cart.png" style="height: 45px; width: 45px; border-radius: 50%; position: absolute; top: 27px; right: 130px;" ></a>
+				<a href="account.html"><img src="./img/user.png" style="height: 38px; width: 38px; border-radius: 50%; position: absolute; top: 30px; right: 70px;"></a>
+				
+		</div>
+		
+			<img src="images/fork.png" class="logo">
+			<h1 style="color: Black;">Burger</h1>  
+		</div>
+	
+	</header>
+
+	<div class="container">
+
+		<section id="cart"> 
+			<article class="product">
+				<header>
+					<a class="remove">
+						<img src="https://www.thespruceeats.com/thmb/vJUFf6L4p8y9Cn_1pE9Z7Ua9uok=/3000x2001/filters:fill(auto,1)/indian-style-burger-1957599-hero-01-266103a4bb4e4ee7b5feb4da2d2e99da.jpg" alt="Tomato Spinach Pasta">
+
+						<h3>Remove product</h3>
+					</a>
+				</header>
+
+				<div class="content">
+
+					<h1>Desi Indian-Style Burger</h1>
+
+					With the huge amount of Western influence,this burger is thee  popular and tasty food in India
+				</div>
+				<footer class="content">
+					<span class="qt-minus">-</span>
+					<span class="qt">2</span>
+					<span class="qt-plus">+</span>
+					<h2 class="full-price">
+						500 Rs.
+					</h2>
+
+					<h2 class="price">
+						250 Rs.
+					</h2>
+				</footer>
+			</article>
+
+			<article class="product">
+				<header>
+					<a class="remove">
+						<img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F13%2FUltimate-Veggie-Burgers-FT-Recipe-0821.jpg&q=60">
+
+						<h3>Remove product</h3>
+					</a>
+				</header>
+
+				<div class="content">
+
+					<h1>Veggie Burger</h1>
+
+					These veggie burgers hit every satisfying, savory note with a hearty mix of pearl barley, chickpeas, mushrooms, and crispy panko
+
+				</div>
+
+				<footer class="content">
+					
+					<span class="qt-minus">-</span>
+					<span class="qt">1</span>
+					<span class="qt-plus">+</span>
+
+					<h2 class="full-price">
+					280 Rs.
+					</h2>
+
+					<h2 class="price">
+						280 Rs.
+					</h2>
+				</footer>
+			</article>
+
+			<article class="product">
+				<header>
+					<a class="remove">
+						<img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/5:4/w_3129,h_2503,c_limit/Smashburger-recipe-120219.jpg " alt="pesto pasta">
+
+						<h3>Remove product</h3>
+					</a>
+				</header>
+
+				<div class="content">
+
+					<h1>Classic Smashed Cheeseburger</h1>
+
+					that's crispy on the outside, yet juicy on the inside
+				</div>
+				
+
+				<footer class="content">
+					
+					<span class="qt-minus">-</span>
+					<span class="qt">3</span>
+					<span class="qt-plus">+</span>
+
+					<h2 class="full-price">
+						360 Rs.
+					</h2>
+
+					<h2 class="price">
+						120 Rs.
+					</h2>
+				</footer>
+			</article>
+
+		</section>
+	</div>
+	
+	<div id="demo" style="width: 400px; height: 200px; margin-left: 1500px; top: -500px;"></div>  
+	<footer id="site-footer">
+		<div class="container clearfix">
+
+			<div class="left">
+				<h2 class="subtotal">Subtotal: <span>1940</span>Rs.</h2>
+				<h3 class="tax">Taxes: <span>12</span>Rs.</h3>
+				<h3 class="shipping">Shipping: <span>8.00</span>Rs.</h3>
+			</div>
+
+			<div class="right">
+				<h1 class="total">Total: <span id="span" >1960</span> Rs.</h1>
+				<a href="pay.php" class="btn">Checkout</a>
+			</div>
+
+		</div>
+	</footer>
+ </main>
+     
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="./js/script.js"></script> 
+	<script src="https://maps.google.com/maps/api/js?sensor=false"> </script> 
+<script type="text/javascript"> 
+function getlocation(){ 
+    if(navigator.geolocation){ 
+        navigator.geolocation.getCurrentPosition(showPos, showErr); 
+    }
+    else{
+        alert("Sorry! your Browser does not support Geolocation API")
+    }
+} 
+function showPos(position){ 
+    latt = position.coords.latitude; 
+    long = position.coords.longitude; 
+    var lattlong = new google.maps.LatLng(latt, long); 
+    var myOptions = { 
+        center: lattlong, 
+        zoom: 15, 
+        mapTypeControl: true, 
+        navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL} 
+    } 
+    var maps = new google.maps.Map(document.getElementById("demo"), myOptions); 
+    var markers = 
+    new google.maps.Marker({position:lattlong, map:maps, title:"You are here!"}); 
+} 
+     function showErr(error) {
+      switch(error.code){
+      case error.PERMISSION_DENIED:
+     alert("User denied the request for Geolocation API.");
+      break;
+     case error.POSITION_UNAVAILABLE:
+     alert("USer location information is unavailable.");
+    break;
+    case error.TIMEOUT:
+    alert("The request to get user location timed out.");
+    break;
+   case error.UNKNOWN_ERROR:
+    alert("An unknown error occurred.");
+    break;
+   }
+} 
+const span = document.getElementById('span');
+const text1 = span.textContent;
+console.log(text1);
+const text2 = span.innerText;
+console.log(text2);           
+
+</script> 
+      
+  </body>
+</html>

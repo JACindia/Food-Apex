@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+               initial-scale=1.0"/>
+          <link rel="stylesheet" href="pay.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+<style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:transparent;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Abel';
+  }
+  li a:hover {
+    background-color:#ffc838;
+    border-radius: 10px;
+  }
+  </style>
+  </head>
+  <body>
+    <script> 
+      </script> 
+        <div class="mainscreen">
+            <div class="card">
+              <div class="leftside">
+                <img
+                  src="https://media.istockphoto.com/vectors/pizza-chef-vector-id1182416349?k=20&m=1182416349&s=612x612&w=0&h=0tf43kpNCBgLNJDinjsy7mfzs-mZWCQEl495GBYJkTs="
+                  class="product"
+                  alt="Shoes"
+                />
+              </div>
+              <div class="rightside">
+                <form>
+                  <h1>CheckOut</h1>
+                  <h2>Payment Information</h2>
+                  <p>Cardholder Name</p>
+                  <input type="text" class="inputbox" name="name" required />
+                  <p>Card Number</p>
+                  <input type="number" class="inputbox" name="card" id="card_number" required />
+      
+                  <p>Card Type</p>
+                  <select class="inputbox" name="card_type" id="card_type" required>
+                    <option value="">--Select a Card Type--</option>
+                    <option value="Visa">Visa</option>
+                    <option value="RuPay">RuPay</option>
+                    <option value="MasterCard">MasterCard</option>
+                  </select>
+      <div class="expcvv">
+      
+                  <p class="expcvv_text">Expiry</p>
+                  <input type="date" class="inputbox" name="exp_date" id="exp_date" required />
+      
+                  <p class="expcvv_text2">CVV</p>
+                  <input type="password" class="inputbox" name="cvv" id="cvv" required />
+              </div>
+                  <p></p>
+
+                  <button type="submit" class="button" onclick="Card()">CheckOut</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        <script>
+          function Card()
+          {
+            
+        }
+        </script>
+  </body>
+</html>
