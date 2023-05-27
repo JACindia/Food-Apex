@@ -29,17 +29,28 @@ It helps in providing more services, choices and better offers to the customer w
 # Team Members
 
    Shivanshi Singh - Back end developer
+   
    John Abraham Chandy - Main developer
+   
    Rishijit Prakash - Front end developer
 
 # Technologies Used
 
+CSS
+70.1%
+ 
+HTML
+28.1%
+ 
+PHP
+1.4%
+ 
+Other
+0.4%
 
 
 # Contact Information
 
 If you have any questions about the project or would like to get in touch with the team, you can reach us at:
 
-   majhiaryan13@gmail.com
    johnabraham.chandy@gmail.com
-   meenu.hani@science.christuniverssity.in
